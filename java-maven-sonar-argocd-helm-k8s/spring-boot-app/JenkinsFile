@@ -47,7 +47,7 @@ pipeline {
     }
     stage('Update Deployment File') {
         environment {
-            GIT_REPO_NAME = "-DevOpsProject"
+            GIT_REPO_NAME = "DevOpsProject"
             GIT_USER_NAME = "osinjolujude"
         }
         steps {
