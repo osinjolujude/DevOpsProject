@@ -12,7 +12,7 @@ public class StartApplication {
 
     @GetMapping("/")
     public String index(final Model model) {
-        model.addAttribute("title", "I Mayowa, have successfuly built a sprint boot application using Jenkins, Maven, sonaqube, docker for CI");
+        model.addAttribute("title", "I Mayowa, have successfully built a sprint boot application using Jenkins, Maven, sonaqube, docker for CI 😀🥰🤩➤");
         model.addAttribute("msg", "This application is deployed on to Kubernetes using ArgoCD for CD.");
         return "index";
     }
