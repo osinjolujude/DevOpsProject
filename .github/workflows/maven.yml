@@ -60,5 +60,5 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR }}
         SONAR_HOST_URL: ${{ secrets.SONAR_URL }}
       run: |
-        cd java-maven-sonar-argocd-helm-k8s/spring-boot-app/target
+        cd java-maven-sonar-argocd-helm-k8s/spring-boot-app
         mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
