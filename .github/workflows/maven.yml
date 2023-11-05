@@ -82,13 +82,13 @@ jobs:
       run: |
         pwd
         ls -a
-        cd java-maven-sonar-argocd-helm-k8s/spring-boot-app
+        # cd java-maven-sonar-argocd-helm-k8s/spring-boot-app
       
     - name: Build and push
       uses: docker/build-push-action@v5
       # uses: mr-smithers-excellent/docker-build-push@v4
       with:
         context: .
-        file: ./java-maven-sonar-argocd-helm-k8s/spring-boot-app/Dockerfile
+        file: ./java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/Dockerfile
         push: true
         tags: ${{ secrets.DOCKERHUB_USER }}/githubaction:latest
