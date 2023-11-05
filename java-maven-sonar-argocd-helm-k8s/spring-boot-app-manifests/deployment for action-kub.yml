@@ -15,7 +15,7 @@ spec:
         app: spring-boot-app-action-to-kub
     spec:
       containers:
-      - name: spring-boot-app-action-to-kub
+      - name: spring-boot-app
         image: mayowa88/githubaction:latest
         ports:
         - containerPort: 8080
