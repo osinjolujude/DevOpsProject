@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-boot-app-action-to-kub
+  labels:
+    app: spring-boot-app-action-to-kub
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: spring-boot-app-action-to-kub
+  template:
+    metadata:
+      labels:
+        app: spring-boot-app-action-to-kub
+    spec:
+      containers:
+      - name: spring-boot-app-action-to-kub
+        image: mayowa88/githubaction:1
+        ports:
+        - containerPort: 8080
