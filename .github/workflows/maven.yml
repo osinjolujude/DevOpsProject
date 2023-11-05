@@ -79,7 +79,10 @@ jobs:
       # uses: mr-smithers-excellent/docker-build-push@v4
 
     - name: CD into spring-boot folder
-      run: cd java-maven-sonar-argocd-helm-k8s/spring-boot-app
+      run: |
+        pwd
+        ls -a
+        cd java-maven-sonar-argocd-helm-k8s/spring-boot-app
       
     - name: Build and push
       uses: docker/build-push-action@v5
