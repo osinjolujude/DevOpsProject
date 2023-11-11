@@ -37,7 +37,7 @@ jobs:
     - name: list current file 
       run: |
         pwd
-        ls -a
+        ls -a   
 
     - name: cd into target
       run: |
@@ -86,6 +86,7 @@ jobs:
       run: |
         pwd
         ls -a
+        export DOCKER_DEFAULT_PLATFORM=linux/amd64
         # cd java-maven-sonar-argocd-helm-k8s/spring-boot-app
       
     - name: Build and push
