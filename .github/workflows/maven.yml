@@ -17,7 +17,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - name: Checkout phase for my pipeline
@@ -29,7 +29,7 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-        
+
     - name: Build with Maven
       run: mvn -B package --file java-maven-sonar-argocd-helm-k8s/spring-boot-app/pom.xml
 
