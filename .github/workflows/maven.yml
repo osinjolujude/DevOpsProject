@@ -17,7 +17,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: linux-latest
 
     steps:
     - name: Checkout phase for my pipeline
