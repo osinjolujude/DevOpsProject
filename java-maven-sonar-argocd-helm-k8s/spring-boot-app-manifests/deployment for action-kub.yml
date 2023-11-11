@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: spring-boot-app
-        image: mayowa88/githubaction:latest
+        image: mayowa88/ultimate-cicd3:latest
         ports:
         - containerPort: 8080
