@@ -17,7 +17,7 @@ on:
 jobs:
   build:
 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout phase for my pipeline
@@ -97,3 +97,17 @@ jobs:
         file: ./java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/Dockerfile
         push: true
         tags: ${{ secrets.DOCKERHUB_USER }}/ultimate-cicd3:2
+
+    - name: Run Trivy vulnerability scanner in repo mode
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          ignore-unfixed: true
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+          severity: 'CRITICAL'
+
+    - name: Upload Trivy scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: 'trivy-results.sarif'
