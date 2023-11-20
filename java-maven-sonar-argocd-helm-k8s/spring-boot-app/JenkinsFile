@@ -9,7 +9,7 @@ pipeline {
     stage('Checkout') {
       steps {
         // sh 'echo passed'
-        git branch: 'main', credentialsId: 'github', url: 'https://github.com/osinjolujude/DevOpsProject.git'
+        git branch: 'main', credentialsId: 'github', url: 'https://github.com/osinjolujude/DevOpsProject'
         //git branch: 'main', url: 'https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero.git'
       }
     }
