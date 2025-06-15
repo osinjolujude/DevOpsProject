@@ -34,13 +34,13 @@ jobs:
 # - name: Build with Maven
 #   run: mvn -B package --file pom.xml
 
-      - name: Set up JDK 21 and Maven
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: '21'
-          cache: 'maven'  # Optional: enables caching
-          check-latest: true
+      # - name: Set up JDK 21 and Maven
+      #   uses: actions/setup-java@v3
+      #   with:
+      #     distribution: 'temurin'
+      #     java-version: '21'
+      #     cache: 'maven'  # Optional: enables caching
+      #     check-latest: true
 
     - name: Set up JDK 21 and Maven
       uses: actions/setup-java@v4
