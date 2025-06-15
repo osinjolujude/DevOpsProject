@@ -44,7 +44,7 @@ jobs:
         check-latest: true
 
     - name: Set up Maven
-      uses: s4u/setup-maven-action@v4
+      uses: s4u/setup-maven-action@v3
       with:
         maven-version: '3.9.6'
 
