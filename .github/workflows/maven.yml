@@ -34,18 +34,19 @@ jobs:
 # - name: Build with Maven
 #   run: mvn -B package --file pom.xml
 
-    - name: Set up Java JDK
-      uses: actions/setup-java@v4
+    - name: Set up JDK 21 and Maven
+      uses: actions/setup-java@v3
       with:
         java-version: '21'
         distribution: 'temurin'
         architecture: x64
         cache: 'maven'
+        check-latest: true
 
-    - name: Set up Maven
-      uses: s4u/setup-maven-action@v1
-      with:
-        maven-version: '3.9.6'
+    # - name: Set up Maven
+    #   uses: s4u/setup-maven-action@v1
+    #   with:
+    #     maven-version: '3.9.6'
 
     - name: Build with Maven
       run: mvn -B package --file java-maven-sonar-argocd-helm-k8s/spring-boot-app/pom.xml
